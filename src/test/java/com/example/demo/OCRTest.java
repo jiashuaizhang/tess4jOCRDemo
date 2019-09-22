@@ -37,7 +37,7 @@ public class OCRTest {
 		URL dataURL = OCRTest.class.getResource("/tessdata/chi_sim.traineddata");
 		File dataFile = new File(dataURL.getPath());
 		tesseract.setDatapath(dataFile.getParentFile().getParent());
-		tesseract.setLanguage("eng");
+		tesseract.setLanguage("chi_sim");
 		String string = tesseract.doOCR(file);
 		System.out.println(string);
 		// always fail
